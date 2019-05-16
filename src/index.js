@@ -15,8 +15,9 @@ class App extends Component {
 
   buttonPressed = buttonPressed => {
     if (buttonPressed === "=") {
+      var calculateValue = eval(this.state.result);
       this.setState({
-        result: eval(this.state.result)
+        result: calculateValue
       });
     } else if (this.state.result === undefined) {
       this.setState({
